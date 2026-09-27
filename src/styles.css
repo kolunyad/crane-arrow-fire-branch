@@ -1,0 +1,45 @@
+@import "@fontsource/russo-one/400.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/700.css";
+@import "@fontsource/manrope/800.css";
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Russo One", "Arial Black", sans-serif;
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --color-bg: #07140d;
+  --color-surface: #13281c;
+  --color-fg: #f4ead8;
+  --color-muted: #9aaf9c;
+  --color-primary: #e23d3d;
+  --color-accent: #e6b325;
+  --color-line: #2c4a38;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-pulse {
+    animation: none;
+  }
+}
